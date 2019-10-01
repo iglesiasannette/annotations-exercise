@@ -11,14 +11,14 @@ public class Author extends Person {
         super(firstName, lastName);
         books = new ArrayList<>();
     }
-//
-//    /**
-//     * @deprecated Use publishedBooks instead
-//     */
-//    @Deprecated
-//    public List<String> getBooks() {
-//        return books;
-//    }
+
+    /**
+     * @deprecated Use publishedBooks instead
+     */
+    @Deprecated
+    public List<String> getBooks() {
+        return books;
+    }
 
     public List<String> publishedBooks() {
         return books;
@@ -28,8 +28,8 @@ public class Author extends Person {
         books.add(book);
     }
 
-//    @Override
-//    public String sortName() {
-//        return String.format("%s, %s", lastName, firstName);
-//    }
+    @Override //updated the name of method from sortName to fullName, like in the parent
+    public String fullName() {
+        return String.format("%s, %s", lastName, firstName);
+    }
 }
