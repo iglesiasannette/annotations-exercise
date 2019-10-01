@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Author extends Person {
-    private ArrayList<String> books;
+    private ArrayList<String> books; //changed the data type of books from List to ArrayList to match the
+    // instantiation of the new instance in the author constructor
 
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
-        books = new ArrayList<>();
+        books = new ArrayList<>(); //
     }
 
     /**
@@ -22,7 +23,7 @@ public class Author extends Person {
 
     public List<String> publishedBooks() {
         return books;
-    }
+    } // List is fine since ArrayList is the super class.
 
     public void addBook(String book) {
         books.add(book);
